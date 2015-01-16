@@ -7,9 +7,9 @@ android {
     signingConfigs {
         release {
             storeFile file('release.keystore')
-            storePassword 'fsol1024'
+            storePassword 'xxxx'
             keyAlias 'AndroidReleaseKey'
-            keyPassword 'fsol1024'
+            keyPassword 'xxxx'
         }
     }
 
