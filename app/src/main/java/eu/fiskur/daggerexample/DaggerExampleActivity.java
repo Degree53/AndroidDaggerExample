@@ -12,7 +12,7 @@ import javax.inject.Inject;
 public class DaggerExampleActivity extends ActionBarActivity {
 
     @Inject
-    AbstractLabelService mFileContents;
+    AbstractLabelService mLabelService;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,7 +22,7 @@ public class DaggerExampleActivity extends ActionBarActivity {
         ((DaggerExampleApp) getApplication()).inject(this);
 
         TextView label = TextView.class.cast(findViewById(R.id.label));
-        String subtitlesStr = mFileContents.getLabel();
+        String subtitlesStr = mLabelService.getLabel();
         label.setText(subtitlesStr);
     }
 
